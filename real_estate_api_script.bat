@@ -1,0 +1,1 @@
+start "Real Estate API" /B C:\ProgramData\Anaconda3\python "C:\Users\Administrator\Desktop\RealEstate\manage.py" runserver 0.0.0.0:5001 --noreload

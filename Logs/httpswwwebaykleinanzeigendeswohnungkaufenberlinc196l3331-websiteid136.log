@@ -1,0 +1,268 @@
+[ 2021-12-23 17:55:25 ] Processing the following configuration:{'website_id': 136, 'url': 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'desired_price': 500000.0, 'iter_no': 0, 'supported_website_id': 1, 'configuration_id': 103, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '00:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-23 16:55:14', 'last_error_datetime': None, 'error_creation_datetime': None}
+
+[ 2021-12-23 17:55:55 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 17:56:02 ] List of urls to scrape:['https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:2/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:3/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:4/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:5/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:6/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:7/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:8/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:9/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:10/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:11/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:12/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:13/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:14/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:15/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:16/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:17/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:18/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:19/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:20/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:21/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:22/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:23/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:24/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:25/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:26/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:27/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:28/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:29/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:30/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:31/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:32/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:33/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:34/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:35/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:36/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:37/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:38/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:39/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:40/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:41/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:42/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:43/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:44/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:45/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:46/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:47/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:48/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:49/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:50/c196l3331']
+
+[ 2021-12-23 17:56:02 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331
+
+[ 2021-12-23 17:56:32 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 17:56:33 ] Page scraped completely.
+
+[ 2021-12-23 17:57:23 ] Processing the following configuration:{'website_id': 136, 'url': 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'desired_price': 500000.0, 'iter_no': 0, 'supported_website_id': 1, 'configuration_id': 103, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '00:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-23 16:55:14', 'last_error_datetime': None, 'error_creation_datetime': None}
+
+[ 2021-12-23 17:57:53 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 17:57:59 ] List of urls to scrape:['https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:2/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:3/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:4/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:5/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:6/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:7/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:8/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:9/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:10/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:11/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:12/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:13/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:14/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:15/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:16/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:17/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:18/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:19/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:20/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:21/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:22/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:23/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:24/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:25/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:26/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:27/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:28/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:29/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:30/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:31/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:32/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:33/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:34/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:35/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:36/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:37/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:38/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:39/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:40/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:41/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:42/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:43/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:44/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:45/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:46/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:47/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:48/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:49/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:50/c196l3331']
+
+[ 2021-12-23 17:57:59 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331
+
+[ 2021-12-23 17:58:30 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 17:58:31 ] Page scraped completely.
+
+[ 2021-12-23 17:59:23 ] Processing the following configuration:{'website_id': 136, 'url': 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'desired_price': 500000.0, 'iter_no': 0, 'supported_website_id': 1, 'configuration_id': 103, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '00:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-23 16:55:14', 'last_error_datetime': None, 'error_creation_datetime': None}
+
+[ 2021-12-23 17:59:54 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 17:59:59 ] List of urls to scrape:['https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:2/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:3/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:4/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:5/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:6/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:7/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:8/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:9/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:10/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:11/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:12/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:13/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:14/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:15/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:16/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:17/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:18/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:19/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:20/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:21/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:22/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:23/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:24/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:25/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:26/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:27/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:28/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:29/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:30/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:31/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:32/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:33/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:34/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:35/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:36/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:37/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:38/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:39/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:40/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:41/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:42/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:43/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:44/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:45/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:46/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:47/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:48/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:49/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:50/c196l3331']
+
+[ 2021-12-23 17:59:59 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331
+
+[ 2021-12-23 18:00:29 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 18:00:30 ] Page scraped completely.
+
+[ 2021-12-23 18:01:20 ] Processing the following configuration:{'website_id': 136, 'url': 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'desired_price': 500000.0, 'iter_no': 0, 'supported_website_id': 1, 'configuration_id': 103, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '00:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-23 16:55:14', 'last_error_datetime': None, 'error_creation_datetime': None}
+
+[ 2021-12-23 18:01:50 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 18:01:56 ] List of urls to scrape:['https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:2/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:3/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:4/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:5/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:6/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:7/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:8/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:9/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:10/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:11/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:12/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:13/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:14/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:15/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:16/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:17/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:18/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:19/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:20/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:21/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:22/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:23/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:24/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:25/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:26/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:27/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:28/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:29/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:30/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:31/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:32/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:33/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:34/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:35/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:36/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:37/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:38/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:39/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:40/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:41/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:42/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:43/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:44/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:45/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:46/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:47/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:48/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:49/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:50/c196l3331']
+
+[ 2021-12-23 18:01:56 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331
+
+[ 2021-12-23 18:02:16 ] Processing the following configuration:{'website_id': 136, 'url': 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'desired_price': 500000.0, 'iter_no': 0, 'supported_website_id': 1, 'configuration_id': 103, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '00:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-23 16:55:14', 'last_error_datetime': None, 'error_creation_datetime': None}
+
+[ 2021-12-23 18:02:46 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 18:02:52 ] List of urls to scrape:['https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:2/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:3/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:4/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:5/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:6/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:7/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:8/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:9/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:10/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:11/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:12/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:13/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:14/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:15/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:16/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:17/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:18/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:19/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:20/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:21/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:22/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:23/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:24/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:25/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:26/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:27/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:28/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:29/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:30/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:31/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:32/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:33/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:34/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:35/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:36/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:37/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:38/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:39/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:40/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:41/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:42/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:43/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:44/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:45/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:46/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:47/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:48/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:49/c196l3331', 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:50/c196l3331']
+
+[ 2021-12-23 18:02:52 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/c196l3331
+
+[ 2021-12-23 18:03:22 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 18:03:22 ] Page scraped completely.
+
+[ 2021-12-23 18:03:22 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/kapitalanlage-2-5-zimmerwohnung-mit-fahrstuhl-in-spandau/1941443423-196-3433 price: 215000 area: 60.0 website_id: 136
+New Ad. Per Square Price 3583 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/2-zimmerwohnung-zum-baldigen-eigenbedarf-/1271208442-196-9672 price: 325000 area: 58.0 website_id: 136
+New Ad. Per Square Price 5603 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/helle-terrassen-wohnung-mit-pool-und-garage-in-toplage-von-grunewald/1969618030-196-24192 price: 1050000 area: 157.0 website_id: 136
+New Ad. Per Square Price 6687 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-19262-we40-investition-in-die-zukunft-modernes-duschbad-holzdielen-altbauflair-zur-zeit-vermietet/1805476825-196-25921 price: 289000 area: 63.0 website_id: 136
+New Ad. Per Square Price 4587 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-19262-we45-investition-in-die-zukunft-begehrte-singlewohnung-im-herzen-der-stadt-zur-zeit-vermietet/1805636023-196-25921 price: 209000 area: 48.59 website_id: 136
+New Ad. Per Square Price 4301 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/vermietete-altbauwohnung-mit-loggia-und-erker/1941521916-196-3473 price: 899000 area: 200.18 website_id: 136
+New Ad. Per Square Price 4490 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/provisionsfrei-bezugsfreies-apartment-am-ku-damm-commission-free-studio-at-ku-damm/1855271907-196-3535 price: 295000 area: 39.92 website_id: 136
+New Ad. Per Square Price 7389 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/modern-leben-in-direkter-wasserlage/1679799506-196-9653 price: 680000 area: 83.13 website_id: 136
+New Ad. Per Square Price 8179 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/immoberlin-de-helle-vermietete-wohnung-in-attraktiver-lage/1882173652-196-24319 price: 159000 area: 37.0 website_id: 136
+New Ad. Per Square Price 4297 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/vermietetes-1-zimmer-apartment-in-charlottenburg-als-kapitalanlage/1648241382-196-3346 price: 197000 area: 49.5 website_id: 136
+New Ad. Per Square Price 3979 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/ca-2-3-rendite-ruhiges-quergebaeude/1881664390-196-17084 price: 250000 area: 56.0 website_id: 136
+New Ad. Per Square Price 4464 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/zentral-stilbewusst-und-hochwertig-ausgestattet-bezugsfreie-wohnung-mit-2-loggien-in-berlin-mitte/1969542156-196-3521 price: 472000 area: 59.09 website_id: 136
+New Ad. Per Square Price 7987 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-19262-we03-gemuetliche-single-wohnung-begehrte-wohnlage-im-herzen-der-stadt-zur-zeit-vermietet/1805579419-196-25921 price: 179000 area: 42.65 website_id: 136
+New Ad. Per Square Price 4196 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-20381-we11-familien-wohnung-naehe-schlossstrasse-ruhig-gelegen-mit-balkon/1805646746-196-3420 price: 649000 area: 133.0 website_id: 136
+New Ad. Per Square Price 4879 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-kapitalanleger-oder-eigennutzer-altersvorsorge-in-top-lage-/1679936642-196-3473 price: 437200 area: 63.39 website_id: 136
+New Ad. Per Square Price 6896 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/adlershof-bezugsfrei-2-zkbb-mit-60m-top-zustand-2-minuten-fussweg-vom-stadtwald-koellnische-heide-/1881758249-196-3367 price: 299000 area: 60.0 website_id: 136
+New Ad. Per Square Price 4983 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/vermietete-altbauwohnung-mit-2-balkonen-und-erker/1969513505-196-3539 price: 729000 area: 120.25 website_id: 136
+New Ad. Per Square Price 6062 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/vermietete-stuckaltbauwohnung-mit-balkon/1473704473-196-3539 price: 539000 area: 95.53 website_id: 136
+New Ad. Per Square Price 5642 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/baugemeinschaft-baumschulenweg-in-berlin-treptow-koepenik/1969483006-196-3481 price: 500000 area: 90.0 website_id: 136
+New Ad. Per Square Price 5555 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-19496-we03-investition-in-die-zukunft-nahe-tempelhofer-feld-mit-stellplatz-option-zur-zeit-vermietet/1805666050-196-3405 price: 217000 area: 87.0 website_id: 136
+New Ad. Per Square Price 2494 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/2-dachgeschossrohlinge-mit-potential-zu-traumwohnungen-im-szenekiez-kreuzkoelln/1969431317-196-3397 price: 800800 area: 228.8 website_id: 136
+New Ad. Per Square Price 3500 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/gut-vermietete-eigentumswohnung-im-begehrten-weitlingkiez-provisionsfrei-/1648213182-196-9684 price: 348000 area: 80.06 website_id: 136
+New Ad. Per Square Price 4346 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/altbauperle-im-denkmalensemble-mit-charme-und-gutem-schnitt-ab-sofort-bezugsfrei-/1969390673-196-9673 price: 749000 area: 161.02 website_id: 136
+New Ad. Per Square Price 4651 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/immoberlin-de-top-lage-exklusive-dachgeschosswohnung-mit-sonnenterrasse-nahe-volkspark-friedrichshain/1881929872-196-3351 price: 680500 area: 77.0 website_id: 136
+New Ad. Per Square Price 8837 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/luxurioese-oase-auf-der-halbinsel-stralau-gehobene-maisonette-mit-dachterrasse-und-garagenstellplatz/1969387722-196-3352 price: 1365500 area: 138.21 website_id: 136
+New Ad. Per Square Price 9879 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:23 ] Alert - New Real Estate.
+
+[ 2021-12-23 18:03:25 ] Email Sent. Process Id:f83398f0
+
+[ 2021-12-23 18:03:25 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:2/c196l3331
+
+[ 2021-12-23 18:03:56 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 18:03:57 ] Page scraped completely.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/traumhaftes-zu-hause-fuer-ihr-kapital-mitten-im-aeltesten-villenviertel-von-berlin/1941771901-196-25903 price: 499900 area: 100.99 website_id: 136
+New Ad. Per Square Price 4949 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/bezugsfreies-city-apartment-zum-wohlfuehlen-in-moabiter-kiezlage/1969376228-196-3501 price: 180000 area: 29.0 website_id: 136
+New Ad. Per Square Price 6206 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/bezugsfreie-2-zimmer-wohnung-in-gefragter-lage-von-buckow/1969367217-196-3390 price: 299900 area: 71.27 website_id: 136
+New Ad. Per Square Price 4207 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/zu-verkaufen-bezugsfreie-wohnung-in-charlottenburg/1969359218-196-3346 price: 385000 area: 74.2 website_id: 136
+New Ad. Per Square Price 5188 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-20381-we06-familien-wohnung-naehe-schlossstrasse-mit-zwei-balkonen-zur-zeit-vermietet-/1805591908-196-3420 price: 599000 area: 122.0 website_id: 136
+New Ad. Per Square Price 4909 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-19496-we08-investition-in-die-zukunft-wohnen-nahe-tempelhofer-feld-mit-stellplatz-option-zur-zeit-vermietet/1805675212-196-3405 price: 309000 area: 122.0 website_id: 136
+New Ad. Per Square Price 2532 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-20381-we17-familien-wohnung-naehe-schlossstrasse-ruhig-gelegen-mit-zwei-balkonen/1805637876-196-3420 price: 469000 area: 99.0 website_id: 136
+New Ad. Per Square Price 4737 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/provisionsfrei-renovierte-wohnung-in-idealer-lage-in-zehlendorf/1958397243-196-3527 price: 442000 area: 65.0 website_id: 136
+New Ad. Per Square Price 6800 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/erstbezug-4-zimmer-wohnung-in-scheunenviertel-in-mitte/1941771861-196-9668 price: 885000 area: 108.0 website_id: 136
+New Ad. Per Square Price 8194 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/wohntraum-im-dachgeschoss-charmant-geschnitten-mit-oberlichtern-/1855301529-196-3433 price: 299000 area: 87.0 website_id: 136
+New Ad. Per Square Price 3436 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/beste-altersvorsorge-steglitz-wo-es-am-schoensten-ist-3-zimmer-etw-im-vorderhaus-2-og-vermietet-/1614748957-196-3422 price: 399000 area: 86.86 website_id: 136
+New Ad. Per Square Price 4593 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/nahe-wilder-eber-dachgeschosswohnung-zur-selbstgestaltung/1969312298-196-20298 price: 419000 area: 64.55 website_id: 136
+New Ad. Per Square Price 6491 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-19262-we36-investition-in-die-zukunft-grosszuegiger-schnitt-mit-balkon-zur-zeit-vermietet/1805616568-196-25921 price: 499000 area: 123.32 website_id: 136
+New Ad. Per Square Price 4046 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/weihnachtswunschzettel/1969304651-196-9628 price: 200000 area: 50.0 website_id: 136
+New Ad. Per Square Price 4000 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/schoene-vermietete-1-zimmer-wohnung-mit-balkon/1855334873-196-3392 price: 176750 area: 39.28 website_id: 136
+New Ad. Per Square Price 4499 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/single-zuhause-mit-balkon/1855292077-196-3392 price: 173025 area: 38.45 website_id: 136
+New Ad. Per Square Price 4500 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/hochwertige-eigentumswohnung-mit-guter-anbindung-in-die-innenstadt/1941555306-196-19394 price: 380000 area: 65.0 website_id: 136
+New Ad. Per Square Price 5846 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/weg-mit-dem-vermieter-/1941477878-196-9641 price: 210000 area: 36.9 website_id: 136
+New Ad. Per Square Price 5691 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/helle-und-geraeumige-4-zimmer-eigentumswohnung-in-berlin-zehlendorf/1969292012-196-3529 price: 629000 area: 118.0 website_id: 136
+New Ad. Per Square Price 5330 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/-vk-20381-we07-familien-wohnung-naehe-schlossstrasse-ruhig-gelegen-mit-loggia/1805619349-196-3420 price: 599000 area: 113.0 website_id: 136
+New Ad. Per Square Price 5300 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/eigentumswohnung-in-berlin-charlottenburg-zum-tausch/1525587441-196-3342 price: None area: 107.0 website_id: 136
+Error:Invalid Price. 
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/sofort-einziehen-helles-und-modernes-familiendomizil/1830324783-196-3413 price: 298500 area: 70.0 website_id: 136
+New Ad. Per Square Price 4264 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:57 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/schoene-ruhige-wohnung-in-zentraler-lage-von-berlin-reinickendorf/1830147502-196-9652 price: 270000 area: 75.37 website_id: 136
+New Ad. Per Square Price 3582 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:58 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/zweiraumwohnung-zum-wohlfuehlen-stellplatz-inklusive-/1941446989-196-25900 price: 285000 area: 62.71 website_id: 136
+New Ad. Per Square Price 4544 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:58 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/familienfreundliches-wohnen-mit-eigenem-garten-/1679826110-196-3365 price: 399200 area: 89.0 website_id: 136
+New Ad. Per Square Price 4485 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:03:58 ] Alert - New Real Estate.
+
+[ 2021-12-23 18:03:59 ] Email Sent. Process Id:f786b9f7
+
+[ 2021-12-23 18:04:00 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/berlin/seite:3/c196l3331
+
+[ 2021-12-23 18:04:30 ] Error occured. Trying again after 30 sec. ( Tries 2).
+
+[ 2021-12-23 18:04:30 ] Page scraped completely.
+
+[ 2021-12-23 18:04:30 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/familienfreundliches-wohnen-mit-eigenem-garten-/1679826110-196-3365 price: 399200 area: 89.0 website_id: 136
+ Duplicate Ad.
+
+[ 2021-12-23 18:04:30 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/vermietete-altbauwohnung-naehe-los-angeles-platz/1137609422-196-9647 price: 1049000 area: 185.33 website_id: 136
+New Ad. Per Square Price 5660 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:30 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/gepflegte-altbauwohnung-in-spreenaehe/1941487093-196-3345 price: 389000 area: 72.52 website_id: 136
+New Ad. Per Square Price 5364 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/eigentumswohnung-in-spandau-3-zimmer-bezugsfrei-ohne-maklerprov-/1969201350-196-3440 price: 315000 area: 68.0 website_id: 136
+New Ad. Per Square Price 4632 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/3-zimmer-wohnung-zu-verkaufen/1820397602-196-3337 price: 380000 area: 66.0 website_id: 136
+New Ad. Per Square Price 5757 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/immoberlin-de-sympathische-vermietete-wohnung-mit-westloggia-in-angenehmer-lage/1880931545-196-3462 price: 330000 area: 68.0 website_id: 136
+New Ad. Per Square Price 4852 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/viel-raum-im-industrial-flair/1679277105-196-3492 price: 1995000 area: 187.5 website_id: 136
+New Ad. Per Square Price 10640 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/immoberlin-de-noble-wohnung-mit-grosser-suedterrasse-pkw-stellplaetze-penthouseflair-am-park/1969085679-196-3547 price: 899000 area: 127.0 website_id: 136
+New Ad. Per Square Price 7078 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/luxurioeses-4-zimmer-domizil-im-begehrten-oskar-helene-heim-erstbezug/1940726994-196-26318 price: 1885000 area: 169.0 website_id: 136
+New Ad. Per Square Price 11153 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/familiengerechte-4-zimmer-neubauwohnung-in-prenzlauer-berg/1940664113-196-3490 price: 950000 area: 107.0 website_id: 136
+New Ad. Per Square Price 8878 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/immoberlin-de-ruhig-liegende-altbauwohnung-beim-schloss-charlottenburg/1804575771-196-3335 price: 570000 area: 85.0 website_id: 136
+New Ad. Per Square Price 6705 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/herbst-aktion-10-000-nachlass-pro-wohnung-ab-dem-kauf-von-2-einheiten-/1854353382-196-3462 price: 200000 area: 64.28 website_id: 136
+New Ad. Per Square Price 3111 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/provisionsfreie-kapitalanlage-wohnung-am-wunderschoenen-schlosspark-charlottenburg/1746754397-196-3347 price: 318000 area: 61.9 website_id: 136
+New Ad. Per Square Price 5137 is less than Desired Price 500000.0.
+
+[ 2021-12-23 18:04:31 ] Ad url: https://www.ebay-kleinanzeigen.de/s-anzeige/tolle-aussichten-sonnendurchflutete-dachgeschosswohnung-mit-grosszuegiger-terrasse-und-weitblick/1969045430-196-3478 price: 499000 area: 89.1 website_id: 136
+New Ad. Per Square Price 5600 is less than Desired Price 500000.0.
+

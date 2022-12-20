@@ -1,0 +1,440 @@
+try:
+    from utils import dbhelper
+except Exception as e:
+    import dbhelper
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import smtplib
+import ssl
+from bs4 import BeautifulSoup
+import datetime
+from dateutil import tz
+import pytz
+import json
+import random
+from utils.table_names import TableName
+from utils import validator
+import logging
+import regex
+import uuid
+import os
+
+def log_summary(logfile_name, msg=""):
+    name_filtered = ''.join(filter(str.isalnum, logfile_name[0]))
+
+    if not os.path.exists('Logs'):
+        os.makedirs('Logs')
+
+    LOG_FILE_PATH = "Logs" + "\\" + name_filtered + f"-websiteid{logfile_name[1]}" + ".log"
+
+    with open(LOG_FILE_PATH, "a+") as logFileObject:
+        msg = "[ " + str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) + " ] " + msg.encode('utf-8').decode('ascii', 'ignore')
+        logFileObject.write(msg)
+        logFileObject.write('\n\n')
+
+
+# log file writer
+def log_errors(msg=""):
+    try:
+        Log_Format = "%(levelname)s %(asctime)s - %(message)s"
+        logging.basicConfig(filename="errors.log",
+                            filemode="a",
+                            format=Log_Format,
+                            level=logging.INFO)
+
+        logging.exception(msg)
+    except Exception as e:
+        print(e)
+
+
+def log_writer(log_msg=""):
+    LOG_FILE_PATH = "log.log"
+    with open(LOG_FILE_PATH, "a") as logFileObject:
+        log_msg = "[ " + str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) + " ] " + log_msg.encode('utf-8').decode('ascii', 'ignore')
+        # print(log_msg)
+        logFileObject.write(log_msg)
+        logFileObject.write('\n')
+
+
+def get_random_number(min=10, max=20):
+    return random.randint(min, max)
+
+
+def calculate_per_square_price(price, area):
+    try:
+        per_square_price = float(price) / float(area)
+    except Exception as e:
+        print("Per Square Price calculation error:", e)
+        per_square_price = 111111
+    return per_square_price
+
+
+def load_json(json_file_path="WebScraping/appSettings.json"):
+    data = {}
+    with open(json_file_path) as f:
+        data = json.load(f)
+
+    return data
+
+
+try:
+    appSettings = load_json()
+except Exception as e:
+    pass
+
+
+def convert_codes_to_html(html):
+    html = str(html)
+    html = html.replace("&lt;", '<')
+    html = html.replace("&gt;", '>')
+    html = BeautifulSoup(html, 'html.parser')
+    return html
+
+
+def get_random_proxy():
+    proxies_list = appSettings['proxies_list']
+    proxy = proxies_list[random.randint(0, len(proxies_list) - 1)]
+    print("proxy:", proxy)
+    return proxy
+
+
+def acp_api_send_request(driver, message_type, data=None):
+    if data is None:
+        data = {}
+    message = {
+        'receiver': 'antiCaptchaPlugin',  # this receiver has to be always set as antiCaptchaPlugin
+        'type': message_type,  # request type, for example setOptions
+        # merge with additional data
+        **data
+    }
+    # run JS code in the web page context
+    # precisely we send a standard window.postMessage method
+    return driver.execute_script("""
+    return window.postMessage({});
+    """.format(json.dumps(message)))
+
+
+def get_supported_website_id(website_url):
+    supported_website_data = dbhelper.get_all_data('supported_website')
+    supported_website_id = 0
+    for data in supported_website_data:
+        supported_website_url = data['url']
+        if supported_website_url in website_url:
+            supported_website_id = data['supported_website_id']
+            break
+    return supported_website_id
+
+
+# send email alert
+def send_gmail(data):
+    is_success = 1
+    error = ""
+    # data = {
+    #     'emails': 'emails',
+    #     'subject': "Alert - New Real Estate",
+    #     'html': 'html'
+    # }
+    try:
+        sender_email = "realestateemail512@gmail.com"
+        password = 'realpassword'
+
+        emails = data['emails']
+        cc = ["mudasar477@gmail.com", "azazrashid797@gmail.com"]
+        # url = data['url']
+        # per_square_area_price = data['per_square_area_price']
+
+        message = MIMEMultipart('text')
+        message["Subject"] = data['subject']
+        message["From"] = sender_email
+        message["To"] = emails
+        message["Cc"] = ', '.join(cc)
+
+        # html = """\
+        # <html>
+        # <body>
+        #     <h4>
+        #     Real Estate found
+        #     </h4>
+        #     <p>
+        #     url : %s
+        #     </p>
+        #     <p>
+        #     Per Area Square Price : %d
+        #     </p>
+        # </body>
+        # </html>
+        # """ % (url, per_square_area_price)
+
+        # Turn these into plain/html MIMEText objects
+        part2 = MIMEText(data['html'], "html")
+
+        # Add HTML/plain-text parts to MIMEMultipart message
+        # The email client will try to render the last part first
+        message.attach(part2)
+
+        emails = emails.split(',')
+        # Create secure connection with server and send email
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(
+                sender_email, emails + cc, message.as_string()
+            )
+
+    except Exception as exp:
+        is_success = 0
+        error = f"Error while sending alert: {exp}"
+        print(error)
+    return is_success, error
+
+
+def get_time(time=None, tz1='Europe/Berlin', tz2='UTC'):
+    """Calculate and return Swatch Internet Time
+
+    :returns: No. of beats (Swatch Internet Time)
+    :rtype: float
+    """
+    # from_zone = tz.gettz(tz1)
+    # to_zone = tz.gettz(tz2)
+    # # time = datetime.datetime.utcnow()
+    # source_time = time.replace(tzinfo=from_zone)
+    # desired_time = source_time.astimezone(to_zone)
+    # # desired_time = desired_time.strftime("%Y/%m/%d, %H:%M:%S")
+
+    from_zone = tz.gettz(tz1)
+    to_zone = tz.gettz(tz2)
+    # dt = datetime.datetime.utcnow()
+    dt = "1970-01-01 " + time
+    dt = datetime.datetime.strptime(dt, "%Y-%m-%d %H:%M:%S")
+    source_time = dt.replace(tzinfo=from_zone)
+    desired_time = source_time.astimezone(to_zone)
+    desired_time = desired_time.strftime("%H:%M:%S")
+
+    return desired_time
+
+
+def convert_datetime_timezone(time=None, tz1="Europe/Berlin", tz2="UTC"):
+    tz1 = pytz.timezone(tz1)
+    tz2 = pytz.timezone(tz2)
+    dt = "1970-01-01 " + time
+    dt = datetime.datetime.strptime(dt, "%Y-%m-%d %H:%M:%S")
+    dt = tz1.localize(dt)
+    dt = dt.astimezone(tz2)
+    dt = dt.strftime("%H:%M:%S")
+
+    return dt
+
+
+def run_config_again(updated_date):
+    if type(updated_date) == str:
+        previous_run = datetime.datetime.strptime(updated_date, '%Y-%m-%d %H:%M:%S')
+    else:
+        previous_run = updated_date
+
+    tz = pytz.timezone('Europe/Berlin')
+    time_now = datetime.datetime.now(tz)
+    time_now = time_now.strftime('%Y-%m-%d %H:%M:%S')
+    time_now = datetime.datetime.strptime(time_now, '%Y-%m-%d %H:%M:%S')
+    diff = time_now - previous_run
+
+    total_seconds = diff.total_seconds()
+    minutes = total_seconds // 60
+
+    if minutes > 30:
+        return 1
+    # print(diff)
+    return 0
+
+
+def is_datetime_between(start_time, end_time, checker=None):
+    datetime_format = '%H:%M:%S'
+    if checker == 'datetime':
+        datetime_format = '%Y-%m-%d %H:%M:%S'
+    # If check time is not given, default to current UTC time
+    start_time = datetime.datetime.strptime(start_time, datetime_format)
+    end_time = datetime.datetime.strptime(end_time, datetime_format)
+    tz = pytz.timezone('Europe/Berlin')
+    current_timestamp = datetime.datetime.now(tz)
+    # current_timestamp = current_timestamp + datetime.timedelta(hours=5)
+    current_time = current_timestamp.strftime(datetime_format)
+    current_time = datetime.datetime.strptime(current_time, datetime_format)
+
+    return int(start_time <= current_time <= end_time)
+
+
+def calculate_execution_status(is_active, is_scheduled):
+    if is_active == 1 and is_scheduled:
+        status = "Running"
+    elif is_active == 1 and not is_scheduled:
+        status = "Scheduled"
+    else:
+        status = "Inactive"
+    return status
+
+
+def check_duplicate_real_estate(current_real_estate, dup_real_estate_list):
+    is_unique = 1
+    # print(dup_real_estate)
+    try:
+        if len(dup_real_estate_list) != 0:
+            # dup_real_estate = dup_real_estate[-1]
+            for dup_real_estate in dup_real_estate_list:
+                if current_real_estate['url'] == dup_real_estate['url'] and \
+                        float(current_real_estate['price']) == float(dup_real_estate['price']) and \
+                        float(current_real_estate['area']) == float(dup_real_estate['area']) and \
+                        int(current_real_estate['website_id']) == int(dup_real_estate['website_id']):
+                    is_unique = 0
+                    break
+                # print("Data already available: ", current_real_estate)
+    except Exception as exp:
+        print('Error in duplicate checker:', exp)
+        is_unique = 1
+    return is_unique
+
+
+def check_scraped_first_time(list_ads, first_five_ads):
+    count = 0
+    try:
+        if len(first_five_ads) != 0 and len(list_ads) != 0:
+            for ad in list_ads:
+                is_scraped = check_duplicate_real_estate(ad, first_five_ads)
+                count = count + 1 if is_scraped == 0 else count
+                if count >= 3:
+                    break
+    except Exception as exp:
+        print('Error in duplicate checker:', exp)
+    return count
+
+
+def process_advertisements(config_url, site_url, result, website_id, desired_price, emails):
+    num_pages_to_scrape = int(appSettings['num_pages_to_scrape'])
+
+    table_name = TableName.REAL_ESTATE
+    last_inserted_real_estate_id = dbhelper.get_last_id(table_name)
+
+    is_good = 0
+
+    html = """<h3>Page URL: %s</h3>
+                <table border='1'>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>URL</th>
+                            <th>Area Price Per Square</th>
+                        </tr>
+               """ % (site_url)
+    i = 1
+    result_db = []
+    for item in result:
+        item['website_id'] = website_id
+        url = item['url']
+        file_path = item['file_path']
+        is_success, error = validator.real_estate_validator(item)
+
+        if is_success:
+            per_square_price = calculate_per_square_price(item['price'], item['area'])
+            email_sent = 0
+            if per_square_price < desired_price:
+                dup_real_estate_list = dbhelper.get_duplicate_real_estate(url)
+                is_unique = check_duplicate_real_estate(item, dup_real_estate_list)
+                if is_unique:
+                    # log_summary(site_url, f"{item}\nUnique Ad found.")
+                    is_good = 1
+                    html = html + "<tr>"
+                    html = html + "<td>" + str(i) + "</td>"
+                    html = html + "<td>" + item['url'] + "</td>"
+                    html = html + "<td>" + str(int(per_square_price)) + "</td>"
+                    html = html + "</tr>"
+                    email_sent = 1
+                    i += 1
+                    log_summary((config_url, website_id), f"Ad url: {url} price: {item['price']} area: {item['area']} website_id: {website_id}\nNew Ad. Per Square Price "
+                                                          f"{str(int(per_square_price))} is less than Desired Price "
+                                                          f"{desired_price}.")
+                else:
+                    log_summary((config_url, website_id), f"Ad url: {url} price: {item['price']} area: {item['area']} website_id: {website_id}\n Duplicate Ad.")
+            else:
+                log_summary((config_url, website_id), f"Ad url: {url} price: {item['price']} area: {item['area']} website_id: {website_id}\nAd Ignored. Per Square Price "
+                                                      f"{str(int(per_square_price))} is greater than "
+                                                      f"Desired Price {desired_price}.")
+            real_estate_data = [0, url, file_path, item['price'], item['area'], is_good, email_sent, website_id]
+            result_db.append(real_estate_data)
+        else:
+            print(error)
+            error = error.replace("\n"," ")
+            log_summary((config_url, website_id), f"Ad url: {url} price: {item['price']} area: {item['area']} website_id: {website_id}\nError:{error}")
+
+    email_id = str(uuid.uuid4())[:8]
+    html = html + "</table>"
+    html = html + "<p>Process Id: %s</p>" % (email_id)
+    num_rows_in_html = regex.findall("<\/tr>", html)
+
+    if len(num_rows_in_html) == 1:
+        if result_db:
+            log_summary((config_url, website_id), f"No ads were found for desired price {desired_price} range.")
+
+        # html_no_table = """<h3>Page URL: %s</h3>
+        #                     <h4>No ads were found for desired price.</h4>
+        #                     <p> Process Id: %s</p>
+        #                 """ % (site_url,email_id)
+        # email_data = {'emails': emails, 'subject': "Alert - New Real Estate.", 'html': html_no_table}
+    else:
+        log_summary((config_url, website_id), "Alert - New Real Estate.")
+        email_data = {'emails': emails, 'subject': "Alert - New Real Estate.", 'html': html}
+
+    if len(result_db):
+        if len(num_rows_in_html) > 1:
+            is_success, error = send_gmail(email_data)
+            if is_success:
+                log_summary((config_url, website_id), f"Email Sent. Process Id:{email_id}")
+        for each in result_db:
+            each[0] = last_inserted_real_estate_id + 1
+            if not is_success:
+                email_sent = 0
+                each[6] = email_sent
+            last_inserted_real_estate_id = dbhelper.insert_real_estate(each)
+
+
+def main():
+    # data = {
+    #     'emails' : 'mudasar477@gmail.com, haider.cdo@gmail.com',
+    #     'url' : 'https://www.ebay-kleinanzeigen.de/s-anzeige/moderne-wohnung-mit-haus-charakter-in-guter-lage/1844719 \900-196-21242',
+    #     'per_square_area_price' : 1111
+    # }
+    html = """\
+                            <html>
+                            <body>
+                                <h4>
+                                Error while scraping website
+                                </h4>
+                                <p>
+                                Website Id : %s
+                                </p>
+                                <p>
+                                URL : %s
+                                </p>
+                            </body>
+                            </html>
+                            """ % (str(1),
+                                   'https://www.ebay-kleinanzeigen.de/s-anzeige/moderne-wohnung-mit-haus-charakter-in-guter-lage/1844719 \900-196-21242')
+    email_data = {
+        'emails': 'mudasar477@urbanblue.ch',
+        'subject': "Alert - Error while scraping website",
+        'html': html
+    }
+    isSuccess, error = send_gmail(email_data)
+    print(isSuccess, error)
+    # print(get_time("03:23:11"))
+    # appr1 = convert_datetime_timezone(time="10:07:00", tz1="Europe/Berlin", tz2="UTC")
+    # print(appr1)
+    # appr2 = get_time(time="10:07:00", tz1="Europe/Berlin", tz2="UTC")
+    # print(appr2)
+    # appr1 = convert_datetime_timezone(time=appr1, tz2="Europe/Berlin", tz1="UTC")
+    # print(appr1)
+    # appr2 = get_time(time=appr2, tz2="Europe/Berlin", tz1="UTC")
+    # print(appr2)
+
+    # Original test case from OP
+    # print(is_datetime_between('12:00:00', '15:59:00'))
+
+
+if __name__ == '__main__':
+    main()

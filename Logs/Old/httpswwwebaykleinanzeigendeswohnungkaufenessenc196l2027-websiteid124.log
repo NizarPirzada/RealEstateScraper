@@ -1,0 +1,10 @@
+[ 2021-12-06 17:50:17 ] Processing the following configuration:{'website_id': 124, 'url': 'https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/essen/c196l2027', 'desired_price': 10000.0, 'iter_no': 0, 'supported_website_id': 1, 'configuration_id': 91, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '09:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-06 17:49:32', 'last_error_datetime': None, 'error_creation_datetime': None}
+
+[ 2021-12-06 17:52:48 ] List of urls to scrape:['https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/essen/c196l2027']
+
+[ 2021-12-06 17:52:48 ] Processing url: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/essen/c196l2027
+
+[ 2021-12-06 17:55:18 ] No Data found wile scraping website: Website Id:124 URL:https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/essen/c196l2027
+
+[ 2021-12-06 17:55:19 ] No Data found wile scraping website: Website Id:124 URL: https://www.ebay-kleinanzeigen.de/s-wohnung-kaufen/essen/c196l2027 Last successfully run at:--/-- 
+

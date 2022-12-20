@@ -1,0 +1,2 @@
+[ 2021-12-23 18:29:55 ] Processing the following configuration:{'website_id': 137, 'url': 'https://www.immobilienscout24.de/Suche/de/berlin/berlin/wohnung-kaufen?sorting=2&enteredFrom=result_list', 'desired_price': 500000.0, 'iter_no': 0, 'supported_website_id': 3, 'configuration_id': 104, 'emails': 'bsaimmobilien@gmail.com', 'is_proxy': 1, 'start_time': '00:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-23 17:17:49', 'last_error_datetime': None, 'error_creation_datetime': None}
+

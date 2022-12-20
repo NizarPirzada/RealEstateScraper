@@ -1,0 +1,10 @@
+[ 2021-12-06 17:33:29 ] Processing the following configuration:{'website_id': 122, 'url': 'https://www.immobilienscout24.de/Suche/de/nordrhein-westfalen/essen/wohnung-kaufen?sorting=2', 'desired_price': 1400.0, 'iter_no': 385, 'supported_website_id': 3, 'configuration_id': 89, 'emails': 'babacksadeghi@yahoo.de', 'is_proxy': 1, 'start_time': '08:00:00', 'end_time': '23:00:00', 'updated_date': '2021-12-03 14:08:07', 'last_error_datetime': None, 'error_creation_datetime': '2021-12-03 14:08:07.979361+01:00'}
+
+[ 2021-12-06 17:33:29 ] List of urls to scrape:['https://www.immobilienscout24.de/Suche/de/nordrhein-westfalen/essen/wohnung-kaufen?sorting=2']
+
+[ 2021-12-06 17:33:29 ] Processing url: https://www.immobilienscout24.de/Suche/de/nordrhein-westfalen/essen/wohnung-kaufen?sorting=2
+
+[ 2021-12-06 17:35:59 ] No Data found wile scraping website: Website Id:122 URL:https://www.immobilienscout24.de/Suche/de/nordrhein-westfalen/essen/wohnung-kaufen?sorting=2
+
+[ 2021-12-06 17:36:00 ] No Data found wile scraping website: Website Id:122 URL: https://www.immobilienscout24.de/Suche/de/nordrhein-westfalen/essen/wohnung-kaufen?sorting=2 Last successfully run at:2021-12-03 14:08:07.979361+01:00 
+

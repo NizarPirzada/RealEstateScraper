@@ -1,0 +1,256 @@
+#__react-alert__ div div div {
+  background-color: #25274d !important;
+  color: white !important;
+}
+th,
+td {
+  vertical-align: middle !important;
+  /* display: table-cell; */
+  color: #25274d;
+}
+th {
+  height: 12vh;
+  font-size: 1.2vw;
+}
+table,
+tr {
+  border: 1px solid #25274d;
+}
+form label {
+  font-weight: 500;
+  font-family: "system-ui";
+}
+.addform,
+.conf-form {
+  font-family: "system-ui";
+}
+.home-cont {
+  /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+  background-color: white;
+}
+body {
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+  background-color: #25274d;
+}
+/* tbody tr td {
+      padding: -0.5rem 0.5rem !important;
+  } */
+
+form {
+  padding: 0 30%;
+}
+
+.addform,
+.conf-form {
+  text-align: center;
+}
+.svg-inline--fa.fa-w-16,
+.svg-inline--fa.fa-w-12 {
+  width: 4em;
+}
+.svg-inline--fa {
+  height: 1.1em;
+}
+.check {
+  color: green;
+}
+.clock {
+  /* color: blue; */
+  color: #25274d;
+}
+/* .caret-4-desc {
+      display: none;
+  } */
+/* .startDate,
+  .endDate {
+    padding: 0.375rem 0.75rem;
+  } */
+.startDate:focus,
+.endDate:focus {
+  outline: 0 !important;
+  border-color: #25274d !important;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+.rc-time-picker {
+  display: block !important;
+}
+.rc-time-picker-input {
+  width: 50% !important;
+}
+.rc-time-picker-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgb(37 39 77 / 50%);
+}
+.input-group-addon {
+  color: black;
+  background-color: #ffffff;
+}
+label,
+.addform,
+.conf-form {
+  color: #25274d;
+}
+.btn-primary,
+.page-item.active .page-link,
+.btn-secondary {
+  color: #fff;
+  background-color: #25274d !important;
+  border-color: #25274d !important;
+}
+.btn-primary:hover,
+.page-link {
+  color: #25274d;
+  background-color: #ffffff !important;
+  border-color: #25274d !important;
+}
+.form-div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 15%;
+  padding-bottom: 3%;
+  top: 1rem;
+  position: relative;
+}
+form {
+  padding: 0 14%;
+}
+.rc-time-picker-clear-icon,
+.rc-time-picker-clear-icon:hover:after {
+  display: none;
+}
+.conf-form {
+  padding-top: 4rem;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgb(37 39 77 / 50%);
+  border-color: #25274d;
+}
+tr {
+  text-align: center;
+}
+td {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 1.1vw;
+}
+#pause,
+#play {
+  cursor: pointer;
+}
+td,
+th {
+  border: 1px solid #25274d;
+}
+.expand_row,
+#url,
+#price {
+  width: 100%;
+}
+#pause {
+  color: red !important;
+}
+#play {
+  color: green !important;
+}
+.form-check-input:checked {
+  background-color: #25274d;
+  border-color: #25274d;
+  box-shadow: 0 0 0 0.25rem rgb(37 39 77 / 30%);
+}
+.form-check-input:focus {
+  border-color: #25274d;
+  box-shadow: 0 0 0 0.25rem rgb(37 39 77 / 30%);
+}
+.add_btn {
+  margin-top: 1.97rem;
+}
+@media screen and (min-width: 1400px) {
+  .home-cont {
+    max-width: 100% !important;
+    width: 70% !important;
+  }
+}
+.table-bordered {
+  border: 1px solid #ced4da;
+}
+.table-bordered th {
+  border: 1px solid #ced4da;
+  border-top: 1px solid #ced4da !important;
+}
+.table-bordered td {
+  border: 1px solid #ced4da;
+  border-top: 1px solid #ced4da !important;
+}
+.remove_field {
+  color: #25274d;
+  cursor: pointer;
+}
+.table {
+  margin: 0 auto !important;
+  width: 100% !important;
+  clear: both !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  word-wrap:break-word !important;
+}
+
+td.details-control {
+    /* background: url('chevron-right-solid.svg') no-repeat center center; */
+    position:relative;
+    cursor: pointer;
+}
+
+td.details-control:before {
+  font-family: monospace;
+  top: 0;
+  left: -5px;
+  padding-right: 10px;
+  font-size: 2vw;
+  color: green;
+  font-weight: bolder;
+}
+
+tr.shown td.details-control:before {
+    /* background: url('chevron-down-solid.svg') no-repeat center center; */
+    
+}
+.table-responsive {
+  display: inline-table !important;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.color {
+  color: #25274d;
+  font-size: 1.5vw;
+}
+
+.url, .price {
+  color: #25274d;
+  font-weight: bold;
+}
+
+.active-state, .tip {
+  cursor: pointer !important;
+}
+
+.remove_field {
+    color: #fff !important;
+}
+
+.swal-button {
+  background-color: #25274d !important;
+}
+
+/* .fa-check-square:before {
+  display: none;
+}
+
+.fa-check-square {
+  display: none;
+} */

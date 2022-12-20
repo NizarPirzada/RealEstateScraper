@@ -1,0 +1,223 @@
+import time
+from pathlib import Path
+from bs4 import BeautifulSoup
+from bs4 import Tag
+from selenium import webdriver
+from fake_useragent import UserAgent
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+from utils import helper, dbhelper
+from utils.table_names import TableName
+import traceback
+
+seconds = 10
+base_url = 'https://www.immobilienscout24.de'
+# captcha_key = 'db6c05aed5b31c17500f03efe8cc8628'
+captcha_extension_path = 'WebScraping/anticaptcha-plugin_v0.59.xpi'
+
+
+def get_page_urls(url,website_id, urls=[], is_proxy=0, counter=1): #         iter_no = 0
+    # iter_no = 0
+    urls = []
+    try:
+        useragent = UserAgent(use_cache_server=False)
+        profile = webdriver.FirefoxProfile()
+        if is_proxy:
+            proxy = helper.get_random_proxy()
+            proxy_ip, proxy_port = proxy.split(':')
+            profile.set_preference("network.proxy.type", 1)
+            profile.set_preference("network.proxy.http", str(proxy_ip))
+            profile.set_preference("network.proxy.http_port", int(proxy_port))
+            profile.set_preference("network.proxy.ssl", str(proxy_ip))
+            profile.set_preference("network.proxy.ssl_port", int(proxy_port))
+            profile.set_preference("network.proxy.ftp", str(proxy_ip))
+            profile.set_preference("network.proxy.ftp_port", int(proxy_port))
+            profile.set_preference("network.proxy.socks", str(proxy_ip))
+            profile.set_preference("network.proxy.socks_port", int(proxy_port))
+            profile.set_preference("network.http.use-cache", False)
+
+        profile.set_preference("general.useragent.override", useragent.random)
+        profile.update_preferences()
+        driver = webdriver.Firefox(firefox_profile=profile, executable_path=GeckoDriverManager().install())
+
+        driver.install_addon((str(Path(captcha_extension_path).absolute())))
+        time.sleep(4)
+        helper.acp_api_send_request(driver,
+                                    'setOptions', {
+                                        'options': {
+                                            'antiCaptchaApiKey': dbhelper.get_all_data(TableName.SETTING)[::-1][0][
+                                                'captcha_string']
+                                        }}
+                                    )
+
+        height = helper.get_random_number(800, 1400)
+        width = helper.get_random_number(800, 1400)
+
+        driver.set_window_size(width, height)
+        driver.get(url)
+
+        seconds = helper.get_random_number(2, 5)
+        time.sleep(seconds)
+        try:
+            WebDriverWait(driver, 120).until(lambda x: x.find_element_by_css_selector('.antigate_solver.solved'))
+        except Exception as e:
+            pass
+
+        seconds = helper.get_random_number(2, 5)
+        time.sleep(seconds)
+        html = driver.page_source
+        soup = BeautifulSoup(html, 'html5lib')
+
+        pagination = soup.find("ul", class_="reactPagination")
+
+        pagination = pagination.find_all("li", class_="p-items")
+
+        num_pages = int(pagination[-2].text)
+        # num_pages = num_pages if iter_no == 0 else 3
+        for x in range(1, num_pages):
+            if '&pagenumber=' in url:
+                temp_url = url[:-1] + str(x + 1)
+            else:
+                temp_url = url + '&pagenumber=' + str(x + 1)
+            urls.append(temp_url)
+
+        driver.quit()
+    except Exception as e:
+        helper.log_errors(e)
+        try:
+            driver.quit()
+        except:
+            pass
+        if counter <= 5:
+            time.sleep(30)
+            urls = [url]
+            is_proxy = not is_proxy
+            helper.log_summary((url, website_id), f"Error occured. Trying again after 30 sec. ( Tries {counter+1}).")
+            urls = get_page_urls(url,website_id, urls, is_proxy, counter+1)
+
+    return urls
+
+
+def scrape_real_estate(url, log_url, website_id, is_proxy=0, counter=1):
+    data = []
+    try:
+        profile = webdriver.FirefoxProfile()
+        useragent = UserAgent(use_cache_server=False)
+
+        if is_proxy:
+            proxy = helper.get_random_proxy()
+            proxy_ip, proxy_port = proxy.split(':')
+            profile.set_preference("network.proxy.type", 1)
+            profile.set_preference("network.proxy.http", str(proxy_ip))
+            profile.set_preference("network.proxy.http_port", int(proxy_port))
+            profile.set_preference("network.proxy.ssl", str(proxy_ip))
+            profile.set_preference("network.proxy.ssl_port", int(proxy_port))
+            profile.set_preference("network.proxy.ftp", str(proxy_ip))
+            profile.set_preference("network.proxy.ftp_port", int(proxy_port))
+            profile.set_preference("network.proxy.socks", str(proxy_ip))
+            profile.set_preference("network.proxy.socks_port", int(proxy_port))
+            profile.set_preference("network.http.use-cache", False)
+
+        profile.set_preference("general.useragent.override", useragent.random)
+        profile.update_preferences()
+        driver = webdriver.Firefox(firefox_profile=profile, executable_path=GeckoDriverManager().install())
+
+        driver.install_addon((str(Path(captcha_extension_path).absolute())))
+        time.sleep(4)
+
+        helper.acp_api_send_request(driver,
+                                    'setOptions', {
+                                        'options': {
+                                            'antiCaptchaApiKey': dbhelper.get_all_data(TableName.SETTING)[::-1][0][
+                                                'captcha_string']
+                                        }}
+                                    )
+        height = helper.get_random_number(800, 1400)
+        width = helper.get_random_number(800, 1400)
+
+        driver.set_window_size(width, height)
+        driver.get(url)
+
+        seconds = helper.get_random_number(20, 30)
+        time.sleep(seconds)
+
+        try:
+            WebDriverWait(driver, 120).until(lambda x: x.find_element_by_css_selector('.antigate_solver.solved'))
+        except Exception as e:
+            pass
+        seconds = helper.get_random_number(20, 30)
+        time.sleep(seconds)
+        html = driver.page_source
+        soup = BeautifulSoup(html, 'html5lib')
+
+        real_estates_list = soup.find("ul", id="resultListItems")
+        for item in real_estates_list.findAll("li", class_="result-list__listing"):
+            real_estate_object = {}
+            if isinstance(item, Tag):
+                try:
+                    article = item.find('a')
+                    try:
+                        if base_url not in article['href']:
+                            real_estate_object['url'] = base_url + article['href']
+                        else:
+                            real_estate_object['url'] = article['href']
+                    except:
+                        real_estate_object['url'] = None
+
+                    elem = item.find_all("dd", class_="font-highlight font-tabular")
+                    try:
+                        price = elem[0].text  # ("p", {"class": "aditem-main--middle--price"}).contents[0].strip()
+                        # price = re.findall('\d*\.?\d+', price)[0]
+                        price = price.split(' ')[0]
+                        price = price.replace('.', '')
+                        price = price.replace(',', '')
+                        price = int(price)
+                        real_estate_object['price'] = price
+                    except Exception as e:
+                        print('price error:', e)
+                        real_estate_object['price'] = None
+                    try:
+                        area = elem[1].text  # findAll("span", {"class": "simpletag tag-small"})[0].contents[0].strip()
+                        # area = re.findall('\d*\.?\d+', area)[0]
+                        area = area.split(' ')[0]
+                        area = float(area.replace(',', '.'))
+                        real_estate_object['area'] = area
+                    except Exception as e:
+                        print('area error:', e)
+                        real_estate_object['area'] = None
+                    real_estate_object['file_path'] = ""
+
+                    data.append(real_estate_object)
+
+                except Exception as e:
+                    helper.log_errors(e)
+        helper.log_summary((log_url, website_id), "Page scraped completely.")
+        driver.quit()
+    except Exception as e:
+        helper.log_errors(e)
+        try:
+            driver.quit()
+        except:
+            pass
+        if counter <= 5:
+            time.sleep(30)
+            is_proxy = not is_proxy
+            helper.log_summary((log_url, website_id), f"Error occured. Trying again after 30 sec. ( Tries {counter+1}).")
+            data = scrape_real_estate(url, log_url, website_id, is_proxy, counter+1)
+
+    return data
+
+
+def main():
+    url = "https://www.immobilienscout24.de/Suche/de/nordrhein-westfalen/wohnung-kaufen?geocodes=051130000307,0511300007,0511300004,0511300005,055130000100,0511300002,0511300001&sorting=2"
+
+    print(get_page_urls(url))
+
+    # print(results)
+
+
+if __name__ == '__main__':
+    # captcha_extension_path = r'anticaptcha-plugin_v0.57.crx'
+    main()
